@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Pixelite | Services </title>
+    <title>Computer Repair Services | Pixelite Cape Town</title>
+    <meta name="description" content="Explore laptop repairs, PC repairs, hardware upgrades, virus removal, data recovery and gaming PC consultations.">
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 
@@ -12,37 +14,16 @@
 
     <!-- Navigation -->
 
-    <header>
-        <div class="logo">
-            Pixelite<span>Solutions</span>
-        </div>
-
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-
-                <li>
-                    <a href="about.html">About Us</a>
-                </li>
-
-                <li>
-                    <a href="services.html" class="active">
-                        Services
-                    </a>
-                </li>
-
-                <li>
-                    <a href="enquiry.html">Enquiry</a>
-                </li>
-
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
-        </nav>
-
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="Pixelite Computer Solutions home">Pixelite<span>Solutions</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+        <nav id="primary-navigation" class="primary-navigation" aria-label="Main navigation"><ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="about.html" >About Us</a></li>
+            <li><a href="services.html" class="active" aria-current="page">Services</a></li>
+            <li><a href="enquiry.html" >Enquiry</a></li>
+            <li><a href="contact.html" >Contact</a></li>
+        </ul></nav>
     </header>
 
 
@@ -69,8 +50,15 @@
 
         <section>
 
-            <div class="card-container">
-                <div class="card service-card">
+            <div class="service-tools" aria-label="Filter services">
+                <label for="serviceSearch">Search services</label>
+                <input type="search" id="serviceSearch" placeholder="e.g. laptop, virus, data" autocomplete="off">
+                <label for="serviceCategory">Filter by category</label>
+                <select id="serviceCategory"><option value="all">All services</option><option value="hardware">Hardware</option><option value="software">Software</option><option value="data">Data services</option><option value="gaming">Gaming</option></select>
+            </div>
+            <p id="serviceResults" class="form-feedback" aria-live="polite"></p>
+            <div class="card-container service-list">
+                <div class="card service-card" data-category="hardware">
                     <div class="service-icon">💻</div>
                     <h3>Laptop Repairs</h3>
 
@@ -81,7 +69,7 @@
                     </p>
                 </div>
 
-                <div class="card service-card">
+                <div class="card service-card" data-category="hardware">
                     <div class="service-icon">🖥️</div>
                     <h3>PC Repairs</h3>
 
@@ -93,7 +81,7 @@
 
                 </div>
 
-                <div class="card service-card">
+                <div class="card service-card" data-category="hardware">
                     <div class="service-icon">⚙️</div>
                     <h3>PC Upgrades</h3>
 
@@ -102,7 +90,7 @@
                         storage and other compatible hardware upgrades.
                     </p>
                 </div>
-                <div class="card service-card">
+                <div class="card service-card" data-category="software">
                     <div class="service-icon">🛡️</div>
                     <h3>Virus Removal</h3>
 
@@ -112,7 +100,7 @@
                     </p>
                 </div>
 
-                <div class="card service-card">
+                <div class="card service-card" data-category="data">
                     <div class="service-icon">💾</div>
                     <h3>Data Recovery</h3>
 
@@ -122,7 +110,7 @@
                     </p>
                 </div>
 
-                <div class="card service-card">
+                <div class="card service-card" data-category="gaming">
                     <div class="service-icon">🎮</div>
                     <h3>Gaming PC Builds</h3>
 
@@ -185,6 +173,7 @@
 
     </footer>
 
+    <script src="../JAVASCRIPT/script.js" defer></script>
 </body>
 
 </html>

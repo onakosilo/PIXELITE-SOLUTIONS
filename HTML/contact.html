@@ -4,43 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixelite | Contact</title>
+    <title>Contact Pixelite Computer Solutions | Western Cape</title>
+    <meta name="description" content="Contact Pixelite Computer Solutions, view branch information and send a general message to our team.">
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 
 <body>
     <!-- Navigation -->
 
-    <header>
-        <div class="logo">
-            Pixelite<span>Solutions</span>
-        </div>
-
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-
-                <li>
-                    <a href="about.html">About Us</a>
-                </li>
-
-                <li>
-                    <a href="services.html">Services</a>
-                </li>
-
-                <li>
-                    <a href="enquiry.html">Enquiry</a>
-                </li>
-
-                <li>
-                    <a href="contact.html" class="active">
-                        Contact
-                    </a>
-                </li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="Pixelite Computer Solutions home">Pixelite<span>Solutions</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+        <nav id="primary-navigation" class="primary-navigation" aria-label="Main navigation"><ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="about.html" >About Us</a></li>
+            <li><a href="services.html" >Services</a></li>
+            <li><a href="enquiry.html" >Enquiry</a></li>
+            <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+        </ul></nav>
     </header>
 
 
@@ -104,7 +86,7 @@
 
                     <br>
 
-                    <iframe
+                    <iframe title="Map showing the Cape Town branch area"
                         class="map"
                         src="https://www.google.com/maps?q=Long+Street+Cape+Town&output=embed"
                         loading="lazy">
@@ -143,7 +125,7 @@
 
                     <br>
 
-                    <iframe
+                    <iframe title="Map showing the Bellville branch area"
                         class="map"
                         src="https://www.google.com/maps?q=Voortrekker+Road+Bellville+Cape+Town&output=embed"
                         loading="lazy">
@@ -173,64 +155,14 @@
 
             <div class="form-container">
 
-                <form id="contactForm">
-
-
-                    <div class="form-group">
-
-                        <label for="contactName">
-                            Full Name
-                        </label>
-
-                        <input
-                            type="text"
-                            id="contactName"
-                            name="contactName"
-                            placeholder="Enter your name"
-                            required>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="contactEmail">
-                            Email Address
-                        </label>
-
-                        <input
-                            type="email"
-                            id="contactEmail"
-                            name="contactEmail"
-                            placeholder="Enter your email"
-                            required>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="contactMessage">
-                            Message
-                        </label>
-
-                        <textarea
-                            id="contactMessage"
-                            name="contactMessage"
-                            placeholder="Enter your message..."
-                            required></textarea>
-
-                    </div>
-
-
-                    <button
-                        type="submit"
-                        class="btn">
-
-                        Send Message
-
-                    </button>
-
+                <form id="contactForm" novalidate action="mailto:info@pixelite.co.za" method="post" enctype="text/plain">
+                    <div class="form-group"><label for="contactName">Full Name</label><input type="text" id="contactName" name="name" autocomplete="name" minlength="2" maxlength="80" required><small class="field-error" id="contactNameError"></small></div>
+                    <div class="form-group"><label for="contactEmail">Email Address</label><input type="email" id="contactEmail" name="email" autocomplete="email" required><small class="field-error" id="contactEmailError"></small></div>
+                    <div class="form-group"><label for="contactPhone">Phone Number (optional)</label><input type="tel" id="contactPhone" name="phone" autocomplete="tel" placeholder="e.g. 0821234567"><small class="field-error" id="contactPhoneError"></small></div>
+                    <div class="form-group"><label for="messageType">Type of Message</label><select id="messageType" name="messageType" required><option value="">Choose a message type</option><option>General question</option><option>Feedback</option><option>Complaint</option><option>Compliment</option><option>Other</option></select><small class="field-error" id="messageTypeError"></small></div>
+                    <div class="form-group"><label for="contactMessage">Full Message</label><textarea id="contactMessage" name="message" minlength="10" maxlength="1500" required placeholder="Type your full message here."></textarea><small class="field-error" id="contactMessageError"></small></div>
+                    <button type="submit" class="btn">Prepare Email</button><p id="contactFeedback" class="form-feedback" role="status" aria-live="polite"></p>
+                    <p class="form-note">This static website prepares an email in your default email application. It does not send or store the message automatically.</p>
                 </form>
 
             </div>
@@ -263,8 +195,6 @@
 
     </footer>
 
-
-    <script src="../JAVASCRIPT/script.js"></script>
-
+    <script src="../JAVASCRIPT/script.js" defer></script>
 </body>
 </html>

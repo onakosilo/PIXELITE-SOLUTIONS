@@ -345,3 +345,47 @@ footer a {
     }
 }
 
+
+
+/* ============================== PART 3 ACCESSIBILITY & INTERACTION ============================== */
+:focus-visible { outline: 3px solid #ffbf47; outline-offset: 3px; }
+button, input, select, textarea { font: inherit; }
+.menu-toggle { display: none; background: transparent; border: 1px solid rgba(255,255,255,.55); border-radius: 6px; padding: 9px; cursor: pointer; }
+.menu-toggle span { display: block; width: 25px; height: 2px; margin: 5px; background: #fff; }
+.primary-navigation a { display: inline-block; padding: 5px 2px; }
+.service-tools { max-width: 650px; margin: 0 auto 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 15px; }
+.service-tools label { font-weight: 700; color: #0b1f3a; }
+.service-tools input, .service-tools select { width: 100%; padding: 11px; border: 1px solid #9aa8b8; border-radius: 5px; background: #fff; }
+.service-card[hidden] { display: none; }
+.field-error { display: block; min-height: 1.2em; color: #b42318; font-weight: 600; margin-top: 5px; }
+[aria-invalid="true"] { border-color: #b42318 !important; }
+.form-feedback { margin-top: 14px; font-weight: 600; color: #0b1f3a; }
+.success-message { background: #e8f7ed; border-left: 4px solid #218838; padding: 12px; }
+.form-note { margin-top: 12px; color: #555; font-size: .92rem; }
+.quote-box { padding: 18px; margin: 18px 0; border-left: 4px solid #00a8ff; background: #eef7fd; border-radius: 6px; }
+.quote-box h3 { color: #0b1f3a; margin-bottom: 7px; }
+.quote-box p { font-weight: 700; margin-bottom: 5px; }
+.map { display: block; max-width: 100%; }
+@media (max-width: 768px) {
+  .site-header { flex-direction: row; flex-wrap: wrap; gap: 12px; }
+  .menu-toggle { display: block; margin-left: auto; }
+  .primary-navigation { display: none; width: 100%; }
+  .primary-navigation.is-open { display: block; }
+  .primary-navigation ul { flex-direction: column; align-items: stretch; gap: 4px; }
+  .primary-navigation a { display: block; padding: 10px; }
+  .map { height: 260px; }
+}
+@media (max-width: 480px) {
+  header { padding: 12px 5%; }
+  .logo { font-size: 1.25rem; }
+  section { padding: 45px 5%; }
+  .hero { min-height: 65vh; padding: 42px 5%; }
+  .hero h1 { font-size: 2rem; line-height: 1.2; }
+  .hero p { font-size: 1rem; }
+  .form-container, .location-card, .card { padding: 22px; }
+  .service-tools { grid-template-columns: 1fr; }
+  .map { height: 220px; }
+  .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+  .footer-links a { margin: 0; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }

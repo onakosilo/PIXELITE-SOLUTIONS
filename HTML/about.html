@@ -4,27 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Pixelite Solutions | About Us </title>
+    <title>About Pixelite | Computer Support in the Western Cape</title>
+    <meta name="description" content="Learn about Pixelite Computer Solutions, our mission, vision and technical support team serving the Western Cape.">
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 
 <body>
     <!-- Navigation -->
 
-    <header>
-        <div class="logo">
-            Pixelite<span>Solutions</span>
-        </div>
-
-        <nav>
-            <ul>
-                <li><a href="index.html"> Home </a></li>
-                <li><a href="about.html" class="active"> About Us </a></li>
-                <li><a href="services.html"> Services </a></li>
-                <li><a href="enquiry.html"> Enquiry </a></li>
-                <li><a href="contact.html"> Contact </a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="Pixelite Computer Solutions home">Pixelite<span>Solutions</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+        <nav id="primary-navigation" class="primary-navigation" aria-label="Main navigation"><ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="about.html" class="active" aria-current="page">About Us</a></li>
+            <li><a href="services.html" >Services</a></li>
+            <li><a href="enquiry.html" >Enquiry</a></li>
+            <li><a href="contact.html" >Contact</a></li>
+        </ul></nav>
     </header>
 
 
@@ -69,7 +67,7 @@
 
                 <div class="about-image">
 
-                    <img src="../MEDIA/aboutus.jpg" alt="Pixelite Offices.">
+                    <img src="../MEDIA/aboutus.jpg" alt="Computer repair and technical support workspace representing Pixelite Computer Solutions." loading="lazy">
                 </div>
             </div>
 
@@ -202,5 +200,6 @@
         </p>
     </footer>
 
+    <script src="../JAVASCRIPT/script.js" defer></script>
 </body>
 </html>
